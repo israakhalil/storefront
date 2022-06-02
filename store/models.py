@@ -32,10 +32,10 @@ class Customer(models.Model):
         (MEMBERSHIP_SILVER, 'Silver'),
         (MEMBERSHIP_GOLD, 'Gold')
     ]
-    given_name = models.CharField(max_length=25)
+    first_name = models.CharField(max_length=25)
     last_name = models.CharField(max_length=25)
     email = models.CharField(max_length=255, unique=True)
-    phone = models.CharField(max_length=10)
+    phone = models.CharField(max_length=250)
     birth_date = models.DateField(null=False)
     membership = models.CharField(
         max_length=1, choices=MEMBERSHIP_CHOICES, default=MEMBERSHIP_BRONZE)
@@ -46,7 +46,7 @@ class Order(models.Model):
     PAYMENT_STATUS_COMPLATE = 'C'
     PAYMENT_STATUS_FAILED = 'F'
 
-    PAYMENT_STATUS = [
+    PAYMENT_STATUS = [ 
         (PAYMENT_STATUS_PENDING, 'Pending'),
         (PAYMENT_STATUS_COMPLATE, 'Complate'),
         (PAYMENT_STATUS_FAILED, 'Failed')
