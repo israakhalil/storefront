@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "debug_toolbar",
     'store',
+    'store_custom',
     'tags',
     'likes'
 ]
@@ -90,7 +91,7 @@ DATABASES = {
         'HOST':'localhost',
         'USER':'root',
         'PASSWORD':'admin',
-        'PORT':'33066'
+        # 'PORT':'33066'
     }
 }
 
