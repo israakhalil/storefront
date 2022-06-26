@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     "debug_toolbar",
     'store',
     'store_custom',
@@ -91,7 +92,7 @@ DATABASES = {
         'HOST':'localhost',
         'USER':'root',
         'PASSWORD':'admin',
-        # 'PORT':'33066'
+        'PORT':'33066'
     }
 }
 
@@ -136,3 +137,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK={
+    'COERCE_DECIMAL_TO_STRING':False
+}
