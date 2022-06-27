@@ -12,3 +12,6 @@ urlpatterns = [
 # Django RestFarmework
 # https://www.django-rest-framework.org/
 # https://www.django-rest-framework.org/api-guide/fields/
+
+# http status
+# https://www.httpstatuses.org/
